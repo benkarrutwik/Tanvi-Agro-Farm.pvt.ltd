@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import "animate.css";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --color-eggshell: #FDFCF8;
+  --color-forest: #2D5A27;
+  --color-forest-dark: #1f401b;
+  --color-gold: #D4AF37;
+  --color-moss: #4A7C44;
+}
+
+@layer utilities {
+  @keyframes pulse-gold {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+  }
+  .animate-pulse-gold {
+    animation: pulse-gold 1.5s infinite;
+  }
+  .text-shadow-premium {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-eggshell);
+  color: #333;
+  font-family: var(--font-sans);
+}
+
+section {
+  scroll-margin-top: 80px;
+}
